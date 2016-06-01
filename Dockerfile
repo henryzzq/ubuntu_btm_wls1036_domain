@@ -16,8 +16,6 @@ WORKDIR /root/Oracle/Middleware
 
 RUN /root/Oracle/Middleware/wlserver_10.3/common/bin/wlst.sh -skipWLSModuleScanning /root/Oracle/create-wls-domain.py
 
-RUN echo 'source /root/Oracle/Middleware/user_projects/domains/base_domain/bin/setDomainEnv.sh' >> /root/.bashrc
-
 RUN chmod +x /root/Oracle/Middleware/user_projects/domains/base_domain/bin/*.sh
 	
 # Expose Node Manager default port, and also default http/https ports for admin console
