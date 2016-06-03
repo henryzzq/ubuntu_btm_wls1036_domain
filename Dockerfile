@@ -18,6 +18,8 @@ RUN /root/Oracle/Middleware/wlserver_10.3/common/bin/wlst.sh -skipWLSModuleScann
 
 RUN chmod +x /root/Oracle/Middleware/user_projects/domains/base_domain/bin/*.sh
 	
+WORKDIR /
+
 # Expose Node Manager default port, and also default http/https ports for admin console
 EXPOSE 7001 5556 8453 36963
 
